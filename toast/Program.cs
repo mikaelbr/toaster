@@ -253,7 +253,7 @@ namespace toast
 
         private static void ToastActivated(ToastNotification sender, object e)
         {
-            Console.WriteLine("Activated");
+            Console.WriteLine("activate");
             Environment.Exit(0);
         }
 
@@ -264,15 +264,15 @@ namespace toast
             switch (e.Reason)
             {
                 case ToastDismissalReason.ApplicationHidden:
-                    outputText = "Hidden";
+                    outputText = "hidden";
                     exitCode = 1;
                     break;
                 case ToastDismissalReason.UserCanceled:
-                    outputText = "Dismissed";
+                    outputText = "dismissed";
                     exitCode = 2;
                     break;
                 case ToastDismissalReason.TimedOut:
-                    outputText = "Timeout";
+                    outputText = "timeout";
                     exitCode = 3;
                     break;
             }
